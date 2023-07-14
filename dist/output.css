@@ -568,10 +568,6 @@ video {
   top: 0px;
 }
 
-.m-\[-1rem\] {
-  margin: -1rem;
-}
-
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -582,19 +578,14 @@ video {
   margin-right: 1rem;
 }
 
-.mx-\[1rem\] {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.mx-\[6rem\] {
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
-.mx-\[5rem\] {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.my-\[-1rem\] {
-  margin-top: -1rem;
-  margin-bottom: -1rem;
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .my-\[-\] {
@@ -602,79 +593,77 @@ video {
   margin-bottom: -;
 }
 
-.mx-\[10rem\] {
-  margin-left: 10rem;
-  margin-right: 10rem;
+.my-\[-1rem\] {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
 }
 
-.my-\[-5rem\] {
-  margin-top: -5rem;
-  margin-bottom: -5rem;
+.my-\[-2rem\] {
+  margin-top: -2rem;
+  margin-bottom: -2rem;
 }
 
-.my-\[-1\.5rem\] {
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.mx-\[8rem\] {
-  margin-left: 8rem;
-  margin-right: 8rem;
+.mx-\[5\.5rem\] {
+  margin-left: 5.5rem;
+  margin-right: 5.5rem;
 }
 
-.mx-\[7rem\] {
-  margin-left: 7rem;
-  margin-right: 7rem;
-}
-
-.mx-\[6rem\] {
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-.mx-\[6\.1rem\] {
-  margin-left: 6.1rem;
-  margin-right: 6.1rem;
-}
-
-.mx-\[6\.11rem\] {
-  margin-left: 6.11rem;
-  margin-right: 6.11rem;
-}
-
-.mx-\[6\.111rem\] {
-  margin-left: 6.111rem;
-  margin-right: 6.111rem;
-}
-
-.mx-\[6\.rem\] {
-  margin-left: 6.rem;
-  margin-right: 6.rem;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.mx-\[5rem\] {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .mb-\[-1rem\] {
   margin-bottom: -1rem;
 }
 
-.mb-\[-1\.5rem\] {
-  margin-bottom: -1.5rem;
+.mt-\[-1\] {
+  margin-top: -1;
+}
+
+.mt-\[-1rem\] {
+  margin-top: -1rem;
+}
+
+.mt-\[-2rem\] {
+  margin-top: -2rem;
+}
+
+.mt-\[-100rem\] {
+  margin-top: -100rem;
+}
+
+.mb-\[-\.2rem\] {
+  margin-bottom: -.2rem;
+}
+
+.mb-\[-\.225rem\] {
+  margin-bottom: -.225rem;
+}
+
+.mb-\[-\.250rem\] {
+  margin-bottom: -.250rem;
+}
+
+.mb-\[-\.3rem\] {
+  margin-bottom: -.3rem;
+}
+
+.mb-\[-rem\] {
+  margin-bottom: -rem;
+}
+
+.mb-\[-\.1rem\] {
+  margin-bottom: -.1rem;
 }
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -697,14 +686,6 @@ video {
   height: 2px;
 }
 
-.max-h-\[5rem\] {
-  max-height: 5rem;
-}
-
-.max-h-\[10rem\] {
-  max-height: 10rem;
-}
-
 .w-\[1\.5rem\] {
   width: 1.5rem;
 }
@@ -713,16 +694,8 @@ video {
   width: 22px;
 }
 
-.w-\[5rem\] {
-  width: 5rem;
-}
-
 .w-full {
   width: 100%;
-}
-
-.max-w-\[5rem\] {
-  max-width: 5rem;
 }
 
 .grid-cols-2 {
@@ -753,24 +726,28 @@ video {
   gap: 0.75rem;
 }
 
-.gap-\[\.5rem\] {
-  gap: .5rem;
+.gap-\[\.2rem\] {
+  gap: .2rem;
 }
 
-.gap-\[\.\] {
-  gap: .;
+.gap-\[\.150rem\] {
+  gap: .150rem;
 }
 
-.gap-\[\.01rem\] {
-  gap: .01rem;
+.gap-\[\.15rem\] {
+  gap: .15rem;
 }
 
 .gap-\[\.1rem\] {
   gap: .1rem;
 }
 
-.gap-\[\.2rem\] {
-  gap: .2rem;
+.gap-\[\.25rem\] {
+  gap: .25rem;
+}
+
+.gap-\[\.125rem\] {
+  gap: .125rem;
 }
 
 .justify-self-end {
@@ -783,6 +760,19 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-\[1rem\] {
+  border-radius: 1rem;
+}
+
+.bg-\[\#0066b8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 102 184 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#25252b\] {
@@ -800,13 +790,18 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
+.bg-\[\#\] {
+  background-color: #;
 }
 
-.bg-\[\#0066b8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 102 184 / var(--tw-bg-opacity));
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-2 {
@@ -819,24 +814,19 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
 }
 
 .py-10 {
@@ -844,32 +834,36 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pb-5 {
-  padding-bottom: 1.25rem;
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -880,20 +874,28 @@ video {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[font-light\] {
+  font-family: font-light;
+}
+
+.font-\[light\] {
+  font-family: light;
+}
+
+.text-\[\.725rem\] {
+  font-size: .725rem;
+}
+
 .text-\[\.95rem\] {
   font-size: .95rem;
 }
 
 .text-\[1\.2rem\] {
   font-size: 1.2rem;
-}
-
-.text-\[2\.5rem\] {
-  font-size: 2.5rem;
-}
-
-.text-\[2\.3rem\] {
-  font-size: 2.3rem;
 }
 
 .text-\[2\.7rem\] {
@@ -904,6 +906,18 @@ video {
   font-size: .5rem;
 }
 
+.text-\[\.7rem\] {
+  font-size: .7rem;
+}
+
+.text-\[\.75rem\] {
+  font-size: .75rem;
+}
+
+.text-\[\.9rem\] {
+  font-size: .9rem;
+}
+
 .text-\[\.8rem\] {
   font-size: .8rem;
 }
@@ -912,44 +926,52 @@ video {
   font-size: .6rem;
 }
 
-.text-\[\.75rem\] {
-  font-size: .75rem;
+.text-\[\.4rem\] {
+  font-size: .4rem;
 }
 
-.text-\[\.7rem\] {
-  font-size: .7rem;
+.text-\[\.1rem\] {
+  font-size: .1rem;
 }
 
-.text-\[\.725rem\] {
-  font-size: .725rem;
+.text-\[\.65rem\] {
+  font-size: .65rem;
 }
 
-.font-\[100\] {
-  font-weight: 100;
+.text-\[\.675rem\] {
+  font-size: .675rem;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.font-extralight {
-  font-weight: 200;
-}
-
-.font-thin {
-  font-weight: 100;
-}
-
-.font-normal {
-  font-weight: 400;
+.font-\[500\] {
+  font-weight: 500;
 }
 
 .font-light {
   font-weight: 300;
 }
 
-.font-\[500\] {
-  font-weight: 500;
+.font-normal {
+  font-weight: 400;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-\[400\] {
+  font-weight: 400;
+}
+
+.font-\[300\] {
+  font-weight: 300;
+}
+
+.font-\[200\] {
+  font-weight: 200;
 }
 
 .text-\[\#0098FF\] {
@@ -962,18 +984,8 @@ video {
   color: rgb(204 204 204 / var(--tw-text-opacity));
 }
 
-.text-\[\] {
-  color: ;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#99999b\] {
-  --tw-text-opacity: 1;
-  color: rgb(153 153 155 / var(--tw-text-opacity));
+.text-\[rgb\(255\2c 255\2c 255\2c 0\.6\)\] {
+  color: rgb(255,255,255,0.6);
 }
 
 .text-\[white\] {
@@ -981,12 +993,40 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[rgb\(\)\] {
-  color: rgb();
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[rgb\(255\2c 255\2c 255\2c 0\.6\)\] {
-  color: rgb(255,255,255,0.6);
+.text-\[\#25252b\] {
+  --tw-text-opacity: 1;
+  color: rgb(37 37 43 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#\] {
+  color: #;
+}
+
+.text-\[\#0066b8\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 102 184 / var(--tw-text-opacity));
+}
+
+.text-\[\#0098ff\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 152 255 / var(--tw-text-opacity));
+}
+
+.text-\[\.\] {
+  color: .;
+}
+
+.text-\[\.rem\] {
+  color: .rem;
 }
 
 .container {
