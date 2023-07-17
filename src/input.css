@@ -5,3 +5,56 @@
 .container {
     @apply mx-auto max-w-[75rem] w-full;
 }
+
+.cta__version__content::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #25252B;
+    top: -8px;
+    right: 10px;
+}
+
+.use .use__item .use__content{
+@apply lg:max-w-[75rem] lg:mx-auto;
+}
+
+.use .use__item:nth-child(odd) {
+    @apply bg-[#fff];
+}
+
+.use .use__item:nth-child(even) {
+    @apply bg-[#f5f5f5]
+}
+
+.use .use__item:nth-child(odd) .use__content{
+    @apply py-14 flex flex-col items-center md:flex-row md:gap-[6rem] md:items-start
+}
+
+.use .use__item:nth-child(even) .use__content {
+    @apply py-14 flex flex-col items-center md:flex-row-reverse md:gap-[6rem] md:items-start
+}
+
+.use .use__content{
+    @apply mx-4 py-5 xl:mx-[18%]
+}
+
+.use .use__content img {
+    @apply w-[16rem] md:w-auto
+}
+
+.use .use__content h6 {
+    @apply py-5 text-[1.2rem] font-extralight md:text-[1.7rem] md:py-0 md:pb-5
+}
+
+.use .use__content p {
+    @apply leading-[2.5rem] text-[.95rem] md:text-[1rem]
+}
+
+.use .use__content p a {
+    @apply text-[#0071bc]
+}
+
