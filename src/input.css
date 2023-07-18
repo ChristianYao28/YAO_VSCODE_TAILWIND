@@ -19,7 +19,7 @@
 }
 
 .use .use__item .use__content{
-@apply lg:max-w-[75rem] lg:mx-auto;
+    @apply lg:max-w-[75rem] lg:mx-auto mx-5;
 }
 
 .use .use__item:nth-child(odd) {
@@ -39,12 +39,13 @@
 }
 
 .use .use__content{
-    @apply mx-4 py-5 xl:mx-[18%]
+    @apply md:px-[8%] py-5 xl:mx-[18%] 2xl:px-0
 }
 
 .use .use__content img {
-    @apply w-[16rem] md:w-auto
+    @apply object-cover w-[60%] md:w-[40%] 
 }
+
 
 .use .use__content h6 {
     @apply py-5 text-[1.2rem] font-extralight md:text-[1.7rem] md:py-0 md:pb-5
@@ -58,3 +59,14 @@
     @apply text-[#0071bc]
 }
 
+.footer__items__before::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #e5e5e5;
+    right: 95%;
+    top: 20%;
+}

@@ -68,17 +68,17 @@
 
     <section class="cta bg-[#2c2c32] pt-3">
         <div class="container">
-            <div class="cta__wrapperm mx-4">
-                <div class="cta__content">
-                    <div class="cta__title mx-[5rem]">
+            <div class="cta__wrapper mx-auto min-[992px]:max-w-[970px] min-[992px]:w-full min-[992px]:pb-10 min-[992px]:pt-3">
+                <div class="cta__content flex flex-col items-center min-[992px]:flex-row min-[992px]:gap-6 mx-4 min-[1200px]:items-start min-[1200px]:mx-0">
+                    <div class="cta__title mx-[5rem] min-[990px]:mx-0 md:pt-6 md:pr-6">
                         <p class="text-[white] text-center text-[2.7rem] font-thin mb-[-1rem]">Code editing.</p>
                         <p class="text-white text-center text-[2.7rem] font-normal">Redefined.</p>
-                        <p class="text-[rgb(255,255,255,0.6)] text-center font-light pb-5">Free. Built on open source. Runs everywhere.</p>
+                        <p class="text-[rgb(255,255,255,0.6)] text-center font-light pb-5 min-[1200px]:whitespace-nowrap">Free. Built on open source. Runs everywhere.</p>
                         <div class="cta__function flex gap-[.125rem] justify-center">
                             <div class="cta__button bg-[#0066b8]">
                                 <button class="cta__download w-full">
-                                    <div class="cta__content px-10 py-2">
-                                        <p class="text-center text-white font-[500]">Download for Windows</p>
+                                    <div class="cta__content px-10 py-2 min-[993px]:px-4">
+                                        <p class="text-center text-white font-[500] whitespace-nowrap">Download for Windows</p>
                                         <p class="text-center text-white text-[.725rem]">Stable Build</p>
                                     </div>
                                 </button>
@@ -92,8 +92,8 @@
                             </div>
                         </div>
                         <div class="cta__version py-3">
-                            <div class="cta__version__content bg-[#25252b] py-3 rounded-[1rem] relative max-w-[291px] mx-auto">
-                                <p class="text-center text-[#0098ff] text-[.75rem] font-light"><a href="">Web,</a> <a href="">Insiders edition</a>, <span class="text-[rgb(255,255,255,0.6)]">or</span> <a href="">other platforms</a></p>
+                            <div class="cta__version__content bg-[#25252b] py-3 rounded-[1rem] relative max-w-[291px] mx-auto min-[993px]:max-w-[250px]">
+                                <p class="text-center text-[#0098ff] text-[.75rem] font-light min-[993px]:text-[.8rem]"><a href="">Web,</a> <a href="">Insiders edition</a>, <span class="text-[rgb(255,255,255,0.6)]">or</span> <a href="">other platforms</a></p>
                             </div>
                         </div>
                         <div class="cta__license text-center text-[.7rem] py-2">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                     </div>    
-                    <img src="../img/cta-code.png" alt="">
+                    <img src="../img/cta-code.png" alt="" class="object-cover min-[670px]:w-[617px] min-[1200px]:w-[750px]">
 
                 </div>
                 
@@ -113,26 +113,34 @@
 
     <section class="features">
         <div class="container">
-            <div class="features__grid grid grid-cols-2">
-                <div class="features__items text-center py-3">
+            <div class="features__grid grid grid-cols-2 md:grid-cols-4 md:items-center h-full md:gap-8">
+                <a href="#intellisense" class="text-[#545454] hover:text-[#2e3192] hover:bg-[#e3e3e3]">
+                <div class="features__items text-center py-3 md:py-8">
                     <i class="fa-regular fa-lightbulb text-[2.9rem] py-2"></i>
                     <p class="text-[1.15rem]">IntelliSense</p>
                 </div>
+                </a>
                 
-                <div class="features__items text-center py-3">
+                <a href="#debug" class="text-[#545454] hover:text-[#37b34a] hover:bg-[#e3e3e3]">
+                <div class="features__items text-center py-3 md:py-8">
                     <i class="fa-solid fa-bug text-[2.9rem] py-2"></i>
                     <p class="text-[1.15rem]">Run and Debug</p>
                 </div>
+                </a>
 
-                <div class="features__items text-center py-3">
-                    <i class="fa-solid fa-sliders text-[2.9rem] py-2"></i>
+                <a href="#git" class="text-[#545454] hover:text-[#f42534] hover:bg-[#e3e3e3]">
+                <div class="features__items text-center py-3 md:py-8">
+                    <i class="fa-solid fa-code-branch text-[2.9rem] py-2"></i>
                     <p class="text-[1.15rem]">Built-in Git</p>
                 </div>
+                </a>
 
-                <div class="features__items text-center py-3">
+                <a href="#extensions" class="text-[#545454] hover:text-[#000] hover:bg-[#e3e3e3]">
+                <div class="features__items text-center py-3 md:py-8">
                     <i class="fa-solid fa-puzzle-piece text-[2.9rem] py-2"></i>
                     <p class="text-[1.15rem]">Extensions</p>
                 </div>
+                </a>
             </div>
         </div>
     </section>
@@ -187,7 +195,7 @@
 
     <section class="use">
         <div class="use__item">
-            <div class="use__content">
+            <div id="intellisense" class="use__content">
                 <img src="/img/home-intellisense.svg" alt="">
                 <div class="use__text">
                     <h6>Meet Intellisense</h6>
@@ -197,7 +205,7 @@
         </div>
 
         <div class="use__item">
-            <div class="use__content">
+            <div id="debug" class="use__content">
                 <img src="/img/home-debug.svg" alt="">
                 <div class="use__text">
                     <h6>Print statement debugging is a thing of the past.</h6>
@@ -207,7 +215,7 @@
         </div>
 
         <div class="use__item">
-            <div class="use__content">
+            <div id="git" class="use__content">
                 <img src="/img/home-git.svg" alt="">
                 <div class="use__text">
                     <h6>Git commands built-in.</h6>
@@ -217,11 +225,11 @@
         </div>
 
         <div class="use__item">
-            <div class="use__content">
-                <img src="/img/Hundreds-of-Extensions.png" alt="">
+            <div id="extensions" class="use__content">
+                <img src="/img/Hundreds-of-Extensions.png" alt="" class="use__png hover:scale-110 hover:duration-1000 ">
                 <div class="use__text">
                     <h6>Extensible and customizable.</h6>
-                    <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a href="">Learn more about extensions</a>.</p>
+                    <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a href="https://code.visualstudio.com/docs/editor/extension-marketplace" class="hover:underline">Learn more about extensions</a>.</p>
                 </div>
             </div>
         </div>
@@ -231,30 +239,30 @@
                 <img src="/img/home-azure.svg" alt="">
                 <div class="use__text">
                     <h6>Deploy with confidence and ease</h6>
-                    <p>With Microsoft Azure you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, all from within VS Code.</p>
+                    <p>With <a href="https://azure.microsoft.com/en-us/" class="hover:underline">Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <a href="https://code.visualstudio.com/docs/azure/extensions" class="hover:underline">all from within VS Code</a>.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="languages bg-[#f5f5f5]">
+    <section class="languages bg-[#f5f5f5] pt-5">
         <div class="container">
             <div class="languages__wrapper mx-3">
                 <div class="languages__title">
                     <h3 class="text-[1.2rem] font-extralight text-center pt-10 pb-5">VS Code for</h3>
-                    <ul class="grid grid-cols-2 gap-5 pt-5 pb-10">
-                        <li class="flex"><img src="/img/javascript.svg " alt=""><p>JavaScript</p></li>
-                        <li class="flex"><img src="/img/python.svg " alt=""><p>Python</p></li>
-                        <li class="flex"><img src="/img/java.svg " alt=""><p>Java</p></li>
-                        <li class="flex"><img src="/img/markdown.svg " alt=""><p>Markdown</p></li>
-                        <li class="flex"><img src="/img/typescript.svg " alt=""><p>TypeScript</p></li>
-                        <li class="flex"><img src="/img/cpp.svg " alt=""><p>C/C++</p></li>
-                        <li class="flex"><img src="/img/json.svg " alt=""><p>JSON</p></li>
-                        <li class="flex"><img src="/img/powershell.svg " alt=""><p>Powershell</p></li>
-                        <li class="flex"><img src="/img/html.svg " alt=""><p>HTML/CSS</p></li>
-                        <li class="flex"><img src="/img/csharp.svg " alt=""><p>C#</p></li>
-                        <li class="flex"><img src="/img/php.svg " alt=""><p>PHP</p></li>
-                        <li class="flex"><img src="/img/yaml.svg " alt=""><p>YAML</p></li> 
+                    <ul class="grid grid-cols-2 gap-5 pt-5 pb-10 md:grid-cols-4 lg:grid-cols-6 ">
+                        <li class="flex w-[70%]"><img src="/img/javascript.svg " alt=""><p>JavaScript</p></li>
+                        <li class="flex w-[70%]"><img src="/img/python.svg " alt=""><p>Python</p></li>
+                        <li class="flex w-[70%]"><img src="/img/java.svg " alt=""><p>Java</p></li>
+                        <li class="flex w-[70%]"><img src="/img/markdown.svg " alt=""><p>Markdown</p></li>
+                        <li class="flex w-[70%]"><img src="/img/typescript.svg " alt=""><p>TypeScript</p></li>
+                        <li class="flex w-[70%]"><img src="/img/cpp.svg " alt=""><p>C/C++</p></li>
+                        <li class="flex w-[70%]"><img src="/img/json.svg " alt=""><p>JSON</p></li>
+                        <li class="flex w-[70%]"><img src="/img/powershell.svg " alt=""><p>Powershell</p></li>
+                        <li class="flex w-[70%]"><img src="/img/html.svg " alt=""><p>HTML/CSS</p></li>
+                        <li class="flex w-[70%]"><img src="/img/csharp.svg " alt=""><p>C#</p></li>
+                        <li class="flex w-[70%]"><img src="/img/php.svg " alt=""><p>PHP</p></li>
+                        <li class="flex w-[70%]"><img src="/img/yaml.svg " alt=""><p>YAML</p></li> 
                     </ul>
                     <p class="text-center"><a href="" class="text-[#0071bc]">and many more languages on the Marketplace...</a></p>
 
@@ -270,7 +278,7 @@
         </div>
     </section>
 
-    <section class="download py-10">
+    <section class="download pt-10 pb-16">
         <div class="container">
             <div class="download__wrapper mx-[5rem]">
                 <div class="download__content ">
@@ -388,10 +396,10 @@
                     </div>
 
                     <div class="download__os flex flex-col flex-wrap items-center">
-                        <img src="/img/apple-logo.svg" alt="" class="py-6 w-[5rem]">
-                        <div class="download__version">
+                        <img src="/img/apple-logo.svg" alt="" class=" py-6 w-[7rem]">
+                        <div class="download__version ">
                             <div class="download__button">
-                                <button class="download__button bg-[#0066b8] text-white px-16 py-4">
+                                <button class="download__button bg-[#0066b8] text-white px-24 py-4">
                                     <div class="download__content  flex gap-3 items-center justify-center">
                                         <i class="fa-solid fa-arrow-down-long"></i>
                                         <p class="text-center font-[500]">Mac</p>
@@ -399,12 +407,86 @@
                                     <p class="text-[.65rem]">macOS 10.11+</p>
                                 </button>
                             </div>
-                            
+                            <div class="download__grid flex justify-center pt-5 gap-2">
+                                <p class="text-center font-semibold">.zip</p>
+                                <div class="download__flex flex gap-1 items-center ">
+                                    <a href="" class="bg-[#0066b8] text-white text-[.9rem] max-h-[50px] px-[.2rem]">Intel chip</a>
+                                    <a href="" class="bg-[#0066b8] text-white text-[.9rem] max-h-[50px] px-[.2rem]">Apple silicon</a>
+                                    <a href="" class="bg-[#0066b8] text-white text-[.9rem] max-h-[50px] px-[.2rem]">Universal</a>
+                                </div>
+                            </div>
+                            <div class="download__grid flex  gap-[.7rem] pt-3">
+                                <p class="text-center font-semibold">CLI</p>
+                                <div class="download__flex flex gap-1 items-center ">
+                                    <a href="" class="bg-[#0066b8] text-white text-[.9rem] max-h-[50px] px-[.2rem]">Intel chip</a>
+                                    <a href="" class="bg-[#0066b8] text-white text-[.9rem] max-h-[50px] px-[.2rem]">Apple silicon</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="license bg-[#f5f5f5] pb-20">
+        <div class="container">
+            <div class="license__wrapper mx-[6.7rem]">
+                <div class="license__flex pt-14 ">
+                    <div class="license__header pb-24">
+                        <h4 class="text-center font-semibold text-[1.1rem]">Want new features sooner?</h4>
+                        <p class="text-center">Get the <a href="https://code.visualstudio.com/insiders" class="text-[#0071bc] text-[.9rem] hover:underline">Insiders build</a> instead.</p>
+                    </div>
+                    <div class="license__header pb-[12rem]">
+                        <h4 class="text-center font-semibold text-[1.1rem]">Use <a href="https://vscode.dev/" class="text-[#0071bc] hover:underline">vscode.dev</a> for quick edits online!</h4>
+                        <p class="text-center text-[.9rem]">GitHub, Azure Repos, and local files.</p>
+                    </div>
+                    <h6 class="font-medium text-[.9rem] text-center py-2">License and Privacy Terms</h6>
+                    <p class="text-[.75rem] text-center leading-10">By downloading and using Visual Studio Code, you agree to the <a href="https://code.visualstudio.com/License/" class="text-[#0071bc] hover:underline">license terms</a> and <a href="https://go.microsoft.com/fwlink/?LinkId=521839" class="text-[#0071bc] hover:underline">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product. If you would prefer not to have this data sent please go see <a href="https://code.visualstudio.com/docs/supporting/FAQ#_how-to-disable-crash-reporting" class="text-[#0071bc] hover:underline">How to Disable Crash Reporting</a> to learn how to disable it.</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#333333] text-white">
+        <div class="container">
+            <div class="footer__wrapper mx-5">
+                <div class="footer__content">
+                    <div class="footer__flex flex items-center gap-3 p-5 pt-7">
+                        <h5 class="text-[.9rem]">Follow @code</h5>
+                        <div class="footer__items">
+                            <ul class="flex gap-1">
+                                <li class="footer__items__border bg-[#e5e5e5] text-[.7rem] rounded">
+                                    <button class="flex gap-1  items-center px-1">
+                                        <img src="../img/cat-logo.svg" alt="" class="w-[.8rem]">
+                                        <p class="text-black font-semibold">Star</p>
+                                    </button>
+                                    
+                                </li>
+
+                                <li class="footer__items__before relative bg-[#e5e5e5] text-[.7rem] flex gap-1 px-1 rounded">
+                                    <a href="" class="text-black font-semibold">148,361</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__flex flex gap-8 pt-1 pb-5">
+                        <ul class="flex gap-5 ">
+                            <li class="text-[.75rem] pt-1">Support</li>
+                            <li class="text-[.75rem] pt-1">Privacy</li>
+                            <li class="text-[.75rem] pt-1">Terms of Use</li>
+                            <li class="text-[.75rem] pt-1">License</li>
+                        </ul>
+                        <div class="footer__items">
+                            <p class="text-[1.3rem]"><i class="fa-brands fa-microsoft"></i> Microsoft</p>
+                            <p class="mt-[-.3rem] text-[.8rem]">&copy 2023 Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
