@@ -8,46 +8,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="/dist/output.css">
 </head>
 <body class="font-sans overflow-x-hidden">
-    <header class="bg-[#2c2c32] py-3">
+    <header class="bg-[#2c2c32] py-3 fixed w-full z-[101] min-[992px]:py-0">
         <div class="container">
-            <div class="header__wrapper mx-4">
-                <div class="header__grid grid-cols-2 grid justify-between items-center">
-                    <div class="header__branding flex gap-3 items-center">
+            <div class="header__wrapper mx-4 min-[992px]:mx-8">
+                <div class="header__grid flex justify-between items-center min-[992px]:flex min-[992px]:justify-between min-[992px]:gap-[1rem]">
+                    <div class="header__branding flex gap-3 items-center pr-[2rem]">
                         <img src="/img/vscode-logo.png" alt="" class="w-[1.5rem] h-[1.5rem]">
-                        <h3 class="text-[1.2rem] text-white">Visual Studio Code</h3>
+                        <h3 class="text-[1.2rem] text-white whitespace-nowrap">Visual Studio Code</h3>
                     </div>
                     
-                    <nav class="header__nav absolute top-0 right-[-100vw] ">
-                        <ul class="">
-                            <li>Docs</li>
-                            <li>Updates</li>
-                            <li>Blog</li>
-                            <li>API</li>
-                            <li>Extensions</li>
-                            <li>FAQ</li>
-                            <li>Learn</li>
+                    <nav class="header__nav absolute w-[100vw] top-[-100vh] left-0 bg-[#2c2c32] duration-500 ease-in-out min-[992px]:static min-[992px]:flex min-[992px]:items-center z-[1]">
+                        <ul class="header__list text-white gap-4 pb-4 p-2 flex flex-col min-[992px]:flex-row min-[992px]:gap-8 min-[992px]:text-center min-[992px]:pb-0">
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">Docs</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">Updates</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">Blog</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">API</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">Extensions</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">FAQ</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold">Learn</li>
+                            <li class="min-[992px]:text-[rgb(255,255,255,0.6)] font-semibold min-[992px]:hidden">Search</li>
+                            
                         </ul>
-                        <div class="header__download">
-                            <button>
-                                <h5 class="hidden"><i class="fa-light fa-arrow-down-to-line"></i> Download</h5>
+                        <div class="header__download h-full bg-[#0066b8] min-[992px]:hidden">
+                            <button class="py-4 pl-6">
+                                <h5 class="  text-white"><i class="fa-solid fa-arrow-down"></i> Download</h5>
                             </button>
                         </div>
                     </nav>
-                    <div class="toggle__menu hover:bg-[#0066b8] flex flex-col gap-1 justify-self-end">
+                    <div class="toggle__menu hover:bg-[#0066b8] p-2 rounded flex flex-col gap-1 min-[992px]:hidden">
                         <span class="block bg-white h-[2px] w-[22px]"></span>
                         <span class="block bg-white h-[2px] w-[22px]"></span>
                         <span class="block bg-white h-[2px] w-[22px]"></span>
                     </div>
-                    <div class="header__flex">
-                        <form action="" class="hidden">
-                            <input type="text" placeholder="Search Docs">
+                    <div class="header__flex hidden justify-center self-end min-[992px]:flex">
+                        <a href=""><i class="fa-solid fa-magnifying-glass fa-rotate-90 hidden pt-9 text-[rgb(255,255,255,0.6)] min-[992px]:block xl:hidden"></i></a>
+                        <form action="" class="hidden xl:block xl:relative ">
+                            <input type="text" placeholder="Search Docs" class="h-full bg-[#3d3d42] pl-10 text-white">
+                            <span class="absolute right-[87%] top-[30%]"><i class="fa-solid fa-magnifying-glass fa-rotate-90 text-white"></i></span>
                         </form>
-                        <div class="header__download">
-                            <button class="hidden">
-                                <h5><i class="fa-light fa-arrow-down-to-line"></i> Download</h5>
+                        <div class="header__download bg-[#005ba4] text-white">
+                            <button class="hidden py-4 px-6 min-[992px]:block">
+                                <h5 class="whitespace-nowrap"><i class="fa-solid fa-arrow-down"></i> Download</h5>
                             </button>
                         </div>
                     </div>
@@ -58,7 +63,7 @@
         </div>
     </header>
 
-    <section class="update bg-[#25252b] py-2">
+    <section class="update bg-[#25252b] py-2 pt-[4rem]">
         <div class="container">
             <div class="update__wrapper mx-16">
                 <p class="text-[#ccc] text-center text-[.95rem]"><u class="text-[#0098FF]">Version 1.80</u> is now available! Read about the new features and fixes from June.</p>
@@ -91,7 +96,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="cta__version py-3">
+                        <div class="cta__version py-3 ">
                             <div class="cta__version__content bg-[#25252b] py-3 rounded-[1rem] relative max-w-[291px] mx-auto min-[993px]:max-w-[250px]">
                                 <p class="text-center text-[#0098ff] text-[.75rem] font-light min-[993px]:text-[.8rem]"><a href="">Web,</a> <a href="">Insiders edition</a>, <span class="text-[rgb(255,255,255,0.6)]">or</span> <a href="">other platforms</a></p>
                             </div>
@@ -145,51 +150,94 @@
         </div>
     </section>
 
-    <section class="tweets bg-[#f5f5f5]">
+<!-- grid grid-cols-1 gap-3 pt-28 lg:block lg:gap-0 lg:pt-0 -->
+
+    <section class="tweets bg-[#f5f5f5] py-10">
         <div class="container">
-            <div class="tweets__wrapper grid grid-cols-1 gap-3 pt-28 lg:grid-cols-3 lg:gap-0">
-                <div class="tweets__content mx-14 lg:mx-4">
-                    <div class="tweets__flex flex gap-2 mx-3">
-                        <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
-                        <div class="tweets__text py-2">
-                            <div class="tweets__icon flex justify-between">
-                                <h6 class="font-bold text-[.8rem]">Darren</h6>
-                                <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+            <div class="tweets__wrapper">
+                <div class="tweets__slider">
+                    <div class="tweets__content mx-14 min-[992px]:mr-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text py-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                             </div>
-                            <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
-                            <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="tweets__content mx-14 lg:mx-4">
-                    <div class="tweets__flex flex gap-2 mx-3">
-                        <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
-                        <div class="tweets__text py-2">
-                            <div class="tweets__icon flex justify-between">
-                                <h6 class="font-bold text-[.8rem]">Darren</h6>
-                                <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                    <div class="tweets__content mx-14 min-[992px]:mx-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text py-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                             </div>
-                            <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
-                            <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="tweets__content mx-14 pb-12 lg:mx-4">
-                    <div class="tweets__flex flex gap-2 mx-3">
-                        <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
-                        <div class="tweets__text py-2">
-                            <div class="tweets__icon flex justify-between">
-                                <h6 class="font-bold text-[.8rem]">Darren</h6>
-                                <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                    <div class="tweets__content mx-14 min-[992px]:ml-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text pt-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                             </div>
-                            <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
-                            <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
                         </div>
                     </div>
-                </div>
-            </div>      
+                </div>   
+                <div class="tweets__slider">
+                    <div class="tweets__content mx-14 min-[992px]:mr-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text py-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweets__content mx-14 min-[992px]:mx-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text py-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweets__content mx-14 min-[992px]:ml-4">
+                        <div class="tweets__flex flex gap-2 mx-3">
+                            <img src="/img/darren-pic.jpg" alt="" class="h-[4rem] rounded-full">
+                            <div class="tweets__text pt-2">
+                                <div class="tweets__icon flex justify-between">
+                                    <h6 class="font-bold text-[.8rem]">Darren</h6>
+                                    <i class="fa-brands fa-twitter text-[.9rem] text-[#6e6e6e] opacity-30"></i>
+                                </div>
+                                <p class="text-[.6rem] text-[#6e6e6e]">@MrDarrenV</p>
+                                <p class="text-[.95rem]">Just as I thought @code couldn't get better, out comes its Remote Development plugins that let you remote into containers as a dev environment! 😍</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
         </div>
     </section>
 
@@ -250,19 +298,19 @@
             <div class="languages__wrapper mx-3">
                 <div class="languages__title">
                     <h3 class="text-[1.2rem] font-extralight text-center pt-10 pb-5">VS Code for</h3>
-                    <ul class="grid grid-cols-2 gap-5 pt-5 pb-10 md:grid-cols-4 lg:grid-cols-6 ">
-                        <li class="flex w-[70%]"><img src="/img/javascript.svg " alt=""><p>JavaScript</p></li>
-                        <li class="flex w-[70%]"><img src="/img/python.svg " alt=""><p>Python</p></li>
-                        <li class="flex w-[70%]"><img src="/img/java.svg " alt=""><p>Java</p></li>
-                        <li class="flex w-[70%]"><img src="/img/markdown.svg " alt=""><p>Markdown</p></li>
-                        <li class="flex w-[70%]"><img src="/img/typescript.svg " alt=""><p>TypeScript</p></li>
-                        <li class="flex w-[70%]"><img src="/img/cpp.svg " alt=""><p>C/C++</p></li>
-                        <li class="flex w-[70%]"><img src="/img/json.svg " alt=""><p>JSON</p></li>
-                        <li class="flex w-[70%]"><img src="/img/powershell.svg " alt=""><p>Powershell</p></li>
-                        <li class="flex w-[70%]"><img src="/img/html.svg " alt=""><p>HTML/CSS</p></li>
-                        <li class="flex w-[70%]"><img src="/img/csharp.svg " alt=""><p>C#</p></li>
-                        <li class="flex w-[70%]"><img src="/img/php.svg " alt=""><p>PHP</p></li>
-                        <li class="flex w-[70%]"><img src="/img/yaml.svg " alt=""><p>YAML</p></li> 
+                    <ul class="grid grid-cols-2 gap-5 pt-5 pb-10 md:grid-cols-4 lg:grid-cols-6 min-[992px]:w-[80%] min-[992px]:mx-auto">
+                        <li class="flex w-[70%] px-5"><img src="/img/javascript.svg " alt=""><p class="min-[992px]:text-[1.1rem]">JavaScript</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/python.svg " alt=""><p class="min-[992px]:text-[1.1rem]">Python</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/java.svg " alt=""><p class="min-[992px]:text-[1.1rem]">Java</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/markdown.svg " alt=""><p class="min-[992px]:text-[1.1rem]">Markdown</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/typescript.svg " alt=""><p class="min-[992px]:text-[1.1rem]">TypeScript</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/cpp.svg " alt=""><p>C/C++</p class="min-[992px]:text-[1.1rem]"></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/json.svg " alt=""><p>JSON</p class="min-[992px]:text-[1.1rem]"></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/powershell.svg " alt=""><p class="min-[992px]:text-[1.1rem]">Powershell</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/html.svg " alt=""><p class="min-[992px]:text-[1.1rem]">HTML/CSS</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/csharp.svg " alt=""><p class="min-[992px]:text-[1.1rem]">C#</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/php.svg " alt=""><p class="min-[992px]:text-[1.1rem]">PHP</p></li>
+                        <li class="flex w-[70%] px-5"><img src="/img/yaml.svg " alt=""><p class="min-[992px]:text-[1.1rem]">YAML</p></li> 
                     </ul>
                     <p class="text-center"><a href="" class="text-[#0071bc]">and many more languages on the Marketplace...</a></p>
 
@@ -281,9 +329,9 @@
     <section class="download pt-10 pb-16">
         <div class="container">
             <div class="download__wrapper mx-[5rem]">
-                <div class="download__content ">
+                <div class="download__content flex flex-wrap justify-center gap-16">
                     <div class="download__os flex flex-col flex-wrap items-center">
-                        <img src="/img/windows-logo.png" alt="" class=" py-6 w-[7rem]">
+                        <img src="/img/windows-logo.png" alt="" class=" py-[2.2rem] w-[7rem]">
                         <div class="download__version ">
                             <div class="download__button">
                                 <button class="download__button bg-[#0066b8] text-white px-16 py-4">
@@ -432,20 +480,21 @@
     <section class="license bg-[#f5f5f5] pb-20">
         <div class="container">
             <div class="license__wrapper mx-[6.7rem]">
-                <div class="license__flex pt-14 ">
-                    <div class="license__header pb-24">
-                        <h4 class="text-center font-semibold text-[1.1rem]">Want new features sooner?</h4>
-                        <p class="text-center">Get the <a href="https://code.visualstudio.com/insiders" class="text-[#0071bc] text-[.9rem] hover:underline">Insiders build</a> instead.</p>
+                <div class="license__flex pt-14 min-[992px]:grid min-[992px]:grid-cols-2">
+                    <div class="license__header pb-24 ">
+                        <h4 class="text-center font-semibold text-[1.1rem] min-[992px]:text-[1.4rem]">Want new features sooner?</h4>
+                        <p class="text-center min-[992px]:text-[1.4rem]">Get the <a href="https://code.visualstudio.com/insiders" class="text-[#0071bc] text-[.9rem] hover:underline min-[992px]:text-[1.4rem]">Insiders build</a> instead.</p>
                     </div>
                     <div class="license__header pb-[12rem]">
-                        <h4 class="text-center font-semibold text-[1.1rem]">Use <a href="https://vscode.dev/" class="text-[#0071bc] hover:underline">vscode.dev</a> for quick edits online!</h4>
-                        <p class="text-center text-[.9rem]">GitHub, Azure Repos, and local files.</p>
+                        <h4 class="text-center font-semibold text-[1.1rem] min-[992px]:text-[1.4rem]">Use <a href="https://vscode.dev/" class="text-[#0071bc] hover:underline min-[992px]:text-[1.4rem]">vscode.dev</a> for quick edits online!</h4>
+                        <p class="text-center text-[.9rem] min-[992px]:text-[1.4rem]">GitHub, Azure Repos, and local files.</p>
                     </div>
+                    
+                </div>
+                <div class="min-[992px]:mx-[10rem]">
                     <h6 class="font-medium text-[.9rem] text-center py-2">License and Privacy Terms</h6>
                     <p class="text-[.75rem] text-center leading-10">By downloading and using Visual Studio Code, you agree to the <a href="https://code.visualstudio.com/License/" class="text-[#0071bc] hover:underline">license terms</a> and <a href="https://go.microsoft.com/fwlink/?LinkId=521839" class="text-[#0071bc] hover:underline">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product. If you would prefer not to have this data sent please go see <a href="https://code.visualstudio.com/docs/supporting/FAQ#_how-to-disable-crash-reporting" class="text-[#0071bc] hover:underline">How to Disable Crash Reporting</a> to learn how to disable it.</p>
                 </div>
-
-                
             </div>
         </div>
     </section>
@@ -453,8 +502,9 @@
     <footer class="bg-[#333333] text-white">
         <div class="container">
             <div class="footer__wrapper mx-5">
-                <div class="footer__content">
-                    <div class="footer__flex flex items-center gap-3 p-5 pt-7">
+                <div class="footer__content items-center min-[992px]:flex min-[992px]:justify-between">
+                    <div class="footer__flex flex items-center gap-5 p-5 pt-7 min-[530px]:pl-0">
+                        <h5 class="hidden text-[.9rem] min-[530px]:block">Hello from Seattle.</h5>
                         <h5 class="text-[.9rem]">Follow @code</h5>
                         <div class="footer__items">
                             <ul class="flex gap-1">
@@ -472,14 +522,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer__flex flex gap-8 pt-1 pb-5">
+                    <div class="footer__flex flex gap-8 pt-1 pb-5 items-center">
                         <ul class="flex gap-5 ">
                             <li class="text-[.75rem] pt-1">Support</li>
                             <li class="text-[.75rem] pt-1">Privacy</li>
                             <li class="text-[.75rem] pt-1">Terms of Use</li>
                             <li class="text-[.75rem] pt-1">License</li>
                         </ul>
-                        <div class="footer__items">
+                        <div class="footer__items pt-4">
                             <p class="text-[1.3rem]"><i class="fa-brands fa-microsoft"></i> Microsoft</p>
                             <p class="mt-[-.3rem] text-[.8rem]">&copy 2023 Microsoft</p>
                         </div>
@@ -488,5 +538,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html> 
