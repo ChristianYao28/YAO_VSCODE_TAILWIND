@@ -6,25 +6,22 @@
     @apply mx-auto max-w-[75rem] w-full;
 }
 
-
 header .header__nav {
-    @apply max-h-0;
+    @apply max-[993px]:max-h-0 overflow-y-scroll top-[3.4rem] min-[992px]:overflow-y-hidden
 }
 header .header__nav.open {
-    @apply max-h-[21rem] overflow-y-scroll top-[3.4rem]
+    @apply max-h-[21rem] 
+}
+
+.cta .cta__os.open {
+    @apply block
+}
+
+
+.cta .cta__version__content::before {
+    @apply content-[''] absolute w-0 h-0 border-l-[15px] border-l-[transparent] border-r-[15px] border-r-[transparent] border-b-[15px] border-b-[#25252b] top-[-8px] right-[10px]
 }
  
-.cta__version__content::before {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #25252B;
-    top: -8px;
-    right: 10px;
-}
 
 .tns-outer {
     @apply relative;
@@ -83,7 +80,11 @@ header .header__nav.open {
     @apply text-[#0071bc]
 }
 
-.footer__items__before::before {
+footer .footer__items__before::before {
+    @apply content-[''] absolute w-0 h-0 border-t-[5px] border-t-[transparent] border-b-[5px] border-b-[transparent] border-r-[5px] border-r-[#e5e5e5] top-[20%] right-[95%]
+}
+
+/* .footer__items__before::before {
     content: "";
     position: absolute;
     width: 0px;
@@ -93,8 +94,10 @@ header .header__nav.open {
     border-right: 5px solid #e5e5e5;
     right: 95%;
     top: 20%;
-}
+} */
 
 @layer components {
-    
+    .header.active {
+        @apply shadow-[0px_3px_3px_0px_rgba(0,0,0,.33)] duration-100
+    }
 }
