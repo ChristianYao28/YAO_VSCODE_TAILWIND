@@ -60,11 +60,11 @@ header .header__nav.open {
 }
 
 .use .use__content{
-    @apply md:px-[8%] py-5 xl:mx-[18%] 2xl:px-0
+    @apply md:px-2 min-[1024px]:px-[5%] py-5 xl:mx-[18%] 2xl:px-0
 }
 
 .use .use__content img {
-    @apply object-cover w-[60%] md:w-[40%] 
+    @apply object-cover w-[60%] md:w-[35%] 
 }
 
 
